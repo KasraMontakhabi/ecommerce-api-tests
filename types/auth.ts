@@ -8,5 +8,5 @@ export interface LoginResponse {
     lastName: string;
     gender: string;
     image: string;
-    [k: string]: unknown;
+    [k: string]: unknown; // for any extra unexpected fields
 }
