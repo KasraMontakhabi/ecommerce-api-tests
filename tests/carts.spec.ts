@@ -70,7 +70,7 @@ test.describe('@carts carts', () => {
         expect(typeof j.deletedOn).toBe('string');
     });
 
-    test('D1 recompute server totals integrity', async ({ request }) => {
+    test('recompute server totals integrity', async ({ request }) => {
         const res = await request.post('/carts/add', {
             data: { userId: 2, products: [{ id: 1, quantity: 1 }, { id: 2, quantity: 3 }] }
         });
