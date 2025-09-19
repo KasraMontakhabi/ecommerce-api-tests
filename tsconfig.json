@@ -12,12 +12,6 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-      "@client/*": ["src/client/*"],
-      "@fixtures/*": ["src/fixtures/*"],
-      "@utils/*": ["src/utils/*"],
-      "@types/*": ["src/types/*"]
-    }
   },
-  "include": ["src", "tests", "playwright.config.ts"]
+  "include": ["tests", "playwright.config.ts"]
 }

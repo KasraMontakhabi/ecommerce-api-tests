@@ -3,12 +3,40 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "test": "playwright test",                         
+  "test:html": "playwright test --reporter=html",    
+  "test:allure": "playwright test --reporter=allure-playwright",
+
+  "test:smoke": "playwright test --grep @smoke",
+  "test:auth": "playwright test --grep @auth",
+  "test:products": "playwright test --grep @products",
+  "test:users": "playwright test --grep @users",
+  "test:cross": "playwright test --grep @cross",
+  "test:cart": "playwright test --grep @cart",
+
+  "allure:smoke": "playwright test --grep @smoke --reporter=allure-playwright",
+  "allure:auth": "playwright test --grep @auth --reporter=allure-playwright",
+  "allure:products": "playwright test --grep @products --reporter=allure-playwright",
+  "allure:users": "playwright test --grep @users --reporter=allure-playwright",
+  "allure:cross": "playwright test --grep @cross --reporter=allure-playwright",
+  "allure:cart": "playwright test --grep @cart --reporter=allure-playwright",
+
+  "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
+  "allure:open": "allure open ./allure-report",
+
+  "allure:run": "playwright test --reporter=allure-playwright && npm run allure:generate && npm run allure:open"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.5.0"
+    "@types/node": "^24.5.2",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   }
 }
