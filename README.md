@@ -94,4 +94,3 @@ Allure output is stored in `allure-results/` and `allure-report/` by default.
 2. Reuse shared types from `types/` or add new definitions when validating additional schema fields.
 3. Use [Playwright annotations](https://playwright.dev/docs/test-annotations) (e.g. `.describe`, `.only`, `.skip`) and tag strings (e.g. `test.describe('@payments', ...)`) to keep filtering consistent.
 4. Prefer helper utilities such as [`recomputeCartTotals`](utils/expectHelpers.ts) to avoid duplicate logic when asserting calculated server totals.
-
