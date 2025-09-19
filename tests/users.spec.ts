@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import type { UsersList } from '../types/users';
+import data from '../data/testData.json';
 
 test.describe('@users users', () => {
 
@@ -54,8 +55,8 @@ test.describe('@users users', () => {
     test('/auth/login then /auth/me', async ({ request }) => {
         const login = await request.post('/auth/login', {
             data: {
-                username: process.env.DJ_USERNAME ?? 'emilys',
-                password: process.env.DJ_PASSWORD ?? 'emilyspass'
+                username: data.username,
+                password: data.password,
             }
         });
         expect(login.ok()).toBeTruthy();
