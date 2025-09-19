@@ -36,7 +36,7 @@ Key settings live in [`playwright.config.ts`](playwright.config.ts):
 - `extraHTTPHeaders` are preconfigured for JSON APIs.
 - The suite runs fully in parallel by default with HTML and Allure reporters enabled.
 
-Authentication credentials and the default base URL are also stored in [`data/testData.json`](data/testData.json). Update this file if you need to exercise the suite against a different environment. The users spec can additionally read `DJ_USERNAME` and `DJ_PASSWORD` from the environment when present.
+Test data and the default base URL are also stored in [`data/testData.json`](data/testData.json). Update this file if you need to exercise the suite against a different environment.
 
 ## Running the Tests
 
