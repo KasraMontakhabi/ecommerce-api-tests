@@ -36,7 +36,7 @@ Key settings live in [`playwright.config.ts`](playwright.config.ts):
 - `extraHTTPHeaders` are preconfigured for JSON APIs.
 - The suite runs fully in parallel by default with HTML and Allure reporters enabled.
 
-Authentication credentials and the default base URL are also stored in [`data/testData.json`](data/testData.json). Update this file if you need to exercise the suite against a different environment. The users spec can additionally read `DJ_USERNAME` and `DJ_PASSWORD` from the environment when present.
+Test data and the default base URL are also stored in [`data/testData.json`](data/testData.json). Update this file if you need to exercise the suite against a different environment.
 
 ## Running the Tests
 
@@ -54,7 +54,7 @@ Commonly used subsets are exposed through npm scripts:
 | `npm run test:auth` | Authentication-only coverage (`@auth`). |
 | `npm run test:products` | Product catalogue checks (`@products`). |
 | `npm run test:users` | User directory scenarios (`@users`). |
-| `npm run test:cart` | Cart workflow regression tests (`@cart`). |
+| `npm run test:carts` | Cart workflow regression tests (`@carts`). |
 | `npm run test:cross` | Cross-cutting and negative tests (`@cross`). |
 
 You can also invoke Playwright directly, e.g. `npx playwright test tests/products.spec.ts --grep @smoke`.
@@ -94,4 +94,3 @@ Allure output is stored in `allure-results/` and `allure-report/` by default.
 2. Reuse shared types from `types/` or add new definitions when validating additional schema fields.
 3. Use [Playwright annotations](https://playwright.dev/docs/test-annotations) (e.g. `.describe`, `.only`, `.skip`) and tag strings (e.g. `test.describe('@payments', ...)`) to keep filtering consistent.
 4. Prefer helper utilities such as [`recomputeCartTotals`](utils/expectHelpers.ts) to avoid duplicate logic when asserting calculated server totals.
-
