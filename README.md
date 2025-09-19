@@ -54,7 +54,7 @@ Commonly used subsets are exposed through npm scripts:
 | `npm run test:auth` | Authentication-only coverage (`@auth`). |
 | `npm run test:products` | Product catalogue checks (`@products`). |
 | `npm run test:users` | User directory scenarios (`@users`). |
-| `npm run test:cart` | Cart workflow regression tests (`@cart`). |
+| `npm run test:carts` | Cart workflow regression tests (`@carts`). |
 | `npm run test:cross` | Cross-cutting and negative tests (`@cross`). |
 
 You can also invoke Playwright directly, e.g. `npx playwright test tests/products.spec.ts --grep @smoke`.
